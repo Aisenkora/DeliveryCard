@@ -31,6 +31,7 @@ public class DeliveryCardTest {
         $(withText("Встреча успешно забронирована")).shouldBe(Condition.hidden, Duration.ofSeconds(100));
 
         $("[data-test-id=notification]").shouldBe(Condition.visible, Duration.ofSeconds(100));
-        $("[data-test-id=notification]").shouldHave(Condition.text("Успешно!\n" + "Встреча успешно забронирована на " + dateGenerate(5, "dd.MM.yyyy"))).shouldBe(Condition.visible);
+        $("[data-test-id=notification]").shouldHave(Condition.text("Успешно!\n" +
+                "Встреча успешно забронирована на " + dateGenerate(5, "dd.MM.yyyy"))).shouldBe(Condition.visible);
     }
 }
